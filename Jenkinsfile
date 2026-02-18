@@ -3,10 +3,10 @@ pipeline {
 
     stages {
         stage('Restore Dependencies') {
-            when{
-                anyOf{
-                    branch: 'main'
-                    branch: 'feature'
+            when {
+                anyOf {
+                    branch 'main'
+                    branch 'feature'
                 }
             }
             steps {
@@ -14,10 +14,10 @@ pipeline {
             }
         }
         stage('Build') {
-            when{
-                anyOf{
-                    branch: 'main'
-                    branch: 'feature'
+            when {
+                anyOf {
+                    branch 'main'
+                    branch 'feature'
                 }
             }
             steps {
@@ -25,10 +25,10 @@ pipeline {
             }
         }
         stage('Tests') {
-            when{
-                anyOf{
-                    branch: 'main'
-                    branch: 'feature'
+            when {
+                anyOf {
+                    branch 'main'
+                    branch 'feature'
                 }
             }
             steps {
